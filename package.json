@@ -12,7 +12,7 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "prisma:seed": "tsx src/prisma/seed.ts"
+    "prisma:seed": "tsx prisma/seed.ts"
   },
   "keywords": [
     "express",
