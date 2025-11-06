@@ -1,7 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import prisma from "../src/config/database.js";
 import { hashPassword } from "../src/utils/password.util.js";
-
-const prisma = new PrismaClient();
 
 async function main() {
   console.log("Starting database seed...");
