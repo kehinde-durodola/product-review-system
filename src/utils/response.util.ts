@@ -1,23 +1,9 @@
 import { Response } from "express";
-
-interface ApiResponse<T = any> {
-  success: boolean;
-  message: string;
-  data?: T;
-}
-
-interface ErrorResponse {
-  success: false;
-  message: string;
-  errors?: Array<{ field: string; message: string }>;
-}
-
-interface PaginationMeta {
-  page: number;
-  limit: number;
-  total: number;
-  totalPages: number;
-}
+import {
+  ApiResponse,
+  ErrorResponse,
+  PaginationMeta,
+} from "../types/common.types.js";
 
 export function successResponse<T>(
   res: Response,
