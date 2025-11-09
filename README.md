@@ -111,13 +111,13 @@ product-review-system/
 
 ### Reviews
 
-| Method | Endpoint                           | Description         | Auth   |
-| ------ | ---------------------------------- | ------------------- | ------ |
-| POST   | `/api/products/:productId/reviews` | Create review       | User   |
-| GET    | `/api/reviews/me`                  | Get own reviews     | User   |
-| GET    | `/api/products/:productId/reviews` | Get product reviews | Public |
-| PUT    | `/api/reviews/:id`                 | Update own review   | User   |
-| DELETE | `/api/reviews/:id`                 | Delete own review   | User   |
+| Method | Endpoint                  | Description         | Auth   |
+| ------ | ------------------------- | ------------------- | ------ |
+| POST   | `/api/reviews/:productId` | Create review       | User   |
+| GET    | `/api/reviews/me`         | Get own reviews     | User   |
+| GET    | `/api/reviews/:productId` | Get product reviews | Public |
+| PUT    | `/api/reviews/:id`        | Update own review   | User   |
+| DELETE | `/api/reviews/:id`        | Delete own review   | User   |
 
 ### Admin
 
