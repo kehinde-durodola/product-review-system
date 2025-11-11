@@ -1,6 +1,6 @@
 # Product Review System API
 
-A production-ready RESTful API for product reviews built with Node.js, TypeScript, Express, Prisma ORM, and PostgreSQL. Features complete authentication, role-based access control, image uploads, and comprehensive CRUD operations.
+A production-ready RESTful API for product reviews built with Node.js, TypeScript, Express, Prisma ORM, and PostgreSQL. Features JWT authentication, email verification, image uploads to Cloudinary, admin controls, and full CRUD operations for products and reviews.
 
 ## Overview
 
@@ -163,6 +163,10 @@ npm run dev
 
 Server runs at `http://localhost:5000`
 
+### API Documentation
+
+Interactive Swagger docs available at: `http://localhost:5000/api-docs`
+
 ### Environment Variables
 
 ```env
@@ -227,4 +231,4 @@ Production-ready with environment-based configuration. Compatible with Render, R
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+MIT
