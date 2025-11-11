@@ -1,7 +1,9 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import swaggerUi from "swagger-ui-express";
 import { env } from "./config/env.js";
+import { swaggerSpec } from "./config/swagger.js";
 import routes from "./routes/index.js";
 import { errorHandler } from "./middlewares/error.middleware.js";
 import logger from "./utils/logger.util.js";
@@ -30,8 +32,18 @@ app.get("/", (req, res) => {
     message: "Product Review API",
     status: "running",
     version: "1.0.0",
+    documentation: "/api-docs",
   });
 });
+
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, {
+    customCss: ".swagger-ui .topbar { display: none }",
+    customSiteTitle: "Product Review API Documentation",
+  })
+);
 
 app.use("/api", routes);
 
